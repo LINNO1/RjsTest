@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>轮播,木桶布局照片墙和回到顶部</title>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		ul,li {
+			list-style: none;
+		}
+		a {
+			text-decoration: none;
+		}
+        .clearfix:after {
+        	content: '';
+        	display: block;
+        	clear: both;
+        }
+        .carousel {
+        	width: 1000px;
+        	height: 600px; /*高度写死，否则无法撑开*/
+        	margin: 0 auto;
+        	overflow: hidden;
+        	position: relative;
+          margin-bottom: 20px;
+        }
+        .carousel .img-ct {
+            overflow: hidden;
+       	    position: absolute;  
+
+       	  	 
+      	  
+       }
+       .carousel .img-ct>li{       	 
+       	  float: left;
+
+       }
+       .carousel .img-ct>li img{
+       	  width: 1000px;
+       	  height: 600px;     	
+       }
+       .carousel .arrow {
+       	  position: absolute;
+       	  width: 50px;
+       	  height: 50px;
+       	  line-height: 50px;
+       	  text-align: center;
+       	  border: 1px solid #ccc;
+       	  border-radius: 50%;
+       	  background: #fff;
+       	  opacity: 0.8;
+       	  font-size: 25px;
+       	  
+       }
+       .carousel .arrow:hover {
+       	 
+       	  opacity: 0.5;
+       	  
+       	  
+       }
+       .carousel .arrow.pre {
+       	   left: 10px;
+           top: 50%;
+           transform: translateY(-50%);
+       	   
+       }
+       .carousel .arrow.next {
+       	  right: 10px;
+       	  top: 50%;
+       	  transform: translateY(-50%);
+       }
+       .carousel .bullet {
+       	  position: absolute;
+       	  bottom: 10px;
+       	  left: 50%;
+       	  transform: translateX(-50%);
+          height: 10px;
+        
+
+       }
+       .carousel .bullet>li {
+       	 float: left;
+       	 width: 50px;
+       	 height: 10px;
+       	 border: 1px solid;
+       	 border-radius: 5px;
+       	 background: #fff;
+       	 cursor: pointer;
+       	 opacity: 0.7;
+       }
+       .carousel .bullet>li.active {
+       	 opacity: 1;
+       }
+       .barrel{
+      width: 1000px;
+      margin: 0 auto;
+    }
+
+    .img-ct {
+      margin-bottom: 8px;
+    }
+
+    .img-ct:after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+
+    .img-box {
+      float: left;
+    }
+
+    .img-ct .img-box:first-child {
+      padding-left: 0;
+    }
+  .showItem {
+      width: 240px;
+      height: 10px;
+      
+    }
+    #btn-loadMore {
+            display: block;
+            width: 90px;
+            margin: 0 auto;
+            text-align: center;
+            padding:  8px 0; 
+            font-size: 16px;        
+            color: #e27272;
+            border: 1px solid #e27272;
+            border-radius: 2px;
+        }
+	</style>
+</head>
+
+<body>
+  <div class="ct1">
+       <div class="carousel">
+
+       </div>
+  </div>
+
+<div class="ct2">
+
+</div>
+<a href="javascript:void(0)" id='btn-loadMore' >加载更多</a>
+<!-- <script src="./src/js/require.js" data-main='./src/js/Lbuild'></script> -->
+<script src="./src/js/require.js" data-main='./dist/merge.min.js'></script>
+</body>
+</html>
